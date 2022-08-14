@@ -8,7 +8,7 @@ stage('build')
 {
 sh "${maven}/bin/mvn clean package"
 }
-/*
+
 stage('report')
 {
 sh "${maven}/bin/mvn sonar:sonar"    
@@ -23,5 +23,5 @@ stage('deploy to tomcat')
    sh "scp -o   StrictHostKeyChecking=no target/maven-web-application.war ec2-user@52.66.147.23:/opt/apache-tomcat-9.0.65/webapps/"
 }
 }
-*/
+
 }
