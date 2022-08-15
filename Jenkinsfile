@@ -23,7 +23,7 @@ stage('uploadartifact')
 stage('deploy to tomcat')
 {
    sshagent(['28cd598e-46ec-44d1-ba15-37dd9f5722cc']){
-   sh "scp -o   StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.110.32.204:/opt/apache-tomcat-9.0.65/webapps/"
+   sh "scp -o   StrictHostKeyChecking=no target/maven-web-application.war ec2-user@15.206.153.246:/opt/apache-tomcat-9.0.65/webapps/"
  }  
 }
 }
