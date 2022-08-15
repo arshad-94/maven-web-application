@@ -20,6 +20,7 @@ triggers {
 	    steps{
 		     sh "mvn clean package"}
 	}
+	/*
 			 //sonarqube report
 			 stage('report'){
 			 steps{sh "mvn sonar:sonar"}
@@ -41,7 +42,7 @@ post {
   }
   failure {
     slacknotification(currentBuild.result)
-  }
+  } */
 }
 }
 def slacknotification(String buildStatus = 'STARTED') 
