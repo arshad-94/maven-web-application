@@ -3,6 +3,9 @@ agent any
 
 tools{
 maven "maven 3.8.5"}
+triggers {
+  pollSCM ('* * * * *')
+}
   stages{
   
      //fetch the code from git
